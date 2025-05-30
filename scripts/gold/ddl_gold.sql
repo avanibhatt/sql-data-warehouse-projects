@@ -116,11 +116,11 @@ LEFT JOIN gold.dim_products pr
 LEFT JOIN gold.dim_customers cu
 	ON sd.sls_cust_id = cu.customer_id
 
-	-- Foreign Key Integrity (Dimension)
+
 SELECT * FROM gold.fact_sales f
 LEFT JOIN gold.dim_customers c
 ON f.customer_key = c.customer_key
 --WHERE c.customer_key IS NULL
 LEFT JOIN gold.dim_products p
 ON p.product_key = f.product_key
-WHERE p.product_key IS NULL
+
